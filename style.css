@@ -23,6 +23,7 @@ body {
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
+  padding: 1rem 0;
 }
 
 #header::before {
@@ -39,7 +40,7 @@ body {
 #header h1 {
   color: var(--text-light);
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -54,6 +55,8 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border-radius: 25px;
+  margin: 0 5px;
 }
 
 .navbar-nav .nav-button::before {
@@ -75,6 +78,7 @@ body {
 .navbar-nav .nav-button:hover {
   transform: translateY(-2px);
   color: var(--text-light) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Section Styles */
@@ -100,9 +104,14 @@ body {
   background-color: var(--accent-color);
 }
 
+.light-title {
+  color: var(--text-light);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
 /* About Section */
 .about-section {
-  background-color: white;
+  background-color: #f9f9f9;
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
@@ -114,7 +123,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  bottom: 0;
   background: linear-gradient(135deg, rgba(74,120,86,0.1) 0%, rgba(255,255,255,0) 100%);
   z-index: 0;
 }
@@ -146,7 +155,7 @@ body {
 .genres-section {
   background-color: var(--background-dark);
   color: var(--text-light);
-  padding: 5rem 0;
+  padding: 3rem 0 5rem; /* Reduced top padding */
   position: relative;
   overflow: hidden;
 }
@@ -179,7 +188,7 @@ body {
 }
 
 .genre-icon {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--accent-color);
 }
@@ -190,13 +199,9 @@ body {
   color: var(--text-light);
 }
 
-.genre-card p {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 /* Membership Section */
 .membership-section {
-  background-color: white;
+  background-color: var(--background-light);
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
@@ -208,30 +213,38 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  bottom: 0;
   background: linear-gradient(45deg, rgba(74,120,86,0.1) 0%, rgba(255,255,255,0) 100%);
   z-index: 0;
 }
 
-.membership-image {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
-  margin-bottom: 2rem;
-  box-shadow: var(--shadow);
-  position: relative;
-  z-index: 1;
+.membership-card {
+  background-color: var(--background-dark);
+  border-radius: 15px;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.membership-card img {
+  max-width: 80%;
+  height: auto;
 }
 
 .plan-card {
-  background-color: var(--background-light);
-  padding: 2rem;
+  background-color: var(--text-light);
   border-radius: 15px;
-  box-shadow: var(--shadow);
+  padding: 2rem;
   height: 100%;
-  transition: var(--transition);
-  position: relative;
-  z-index: 1;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .plan-card.premium {
@@ -239,25 +252,15 @@ body {
   color: var(--text-light);
 }
 
-.plan-card:hover {
-  transform: translateY(-5px);
-}
-
 .plan-card h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
   font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   color: var(--primary-color);
 }
 
 .plan-card.premium h3 {
   color: var(--text-light);
-}
-
-.plan-card ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1.5rem;
 }
 
 .plan-card ul li {
@@ -269,6 +272,55 @@ body {
 .plan-card ul li i {
   color: var(--accent-color);
   margin-right: 0.5rem;
+}
+
+/* Payment Section */
+.payment-section {
+  background-color: #fff;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(74,120,86,0.1) 0%, rgba(255,255,255,0) 100%);
+  z-index: 0;
+}
+
+.payment-card {
+  background-color: var(--background-light);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+}
+
+.payment-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 
 /* Location Section */
@@ -299,14 +351,6 @@ body {
   box-shadow: var(--shadow);
 }
 
-.location-image {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 20px;
-  margin-bottom: 2rem;
-  box-shadow: var(--shadow);
-}
-
 .contact-details {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2rem;
@@ -332,55 +376,6 @@ body {
   color: var(--accent-color);
 }
 
-/* Payment Section */
-.payment-section {
-  background-color: white;
-  padding: 5rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.payment-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(74,120,86,0.1) 0%, rgba(255,255,255,0) 100%);
-  z-index: 0;
-}
-
-.payment-card {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--background-light);
-  border-radius: 15px;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-  position: relative;
-  z-index: 1;
-}
-
-.payment-card:hover {
-  transform: translateY(-5px);
-}
-
-.payment-icon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.payment-card h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-}
-
 /* Modal Styles */
 .modal-content {
   border-radius: 15px;
@@ -401,7 +396,8 @@ body {
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
   transition: var(--transition);
 }
 
@@ -431,6 +427,12 @@ body {
   transform: rotate(30deg);
 }
 
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
 .social-links {
   list-style: none;
   padding: 0;
@@ -451,6 +453,60 @@ body {
   transform: translateY(-2px);
 }
 
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  font-size: 2rem;
+  color: var(--primary-color);
+  background-color: var(--text-light);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+
+/* Modal Enhancements */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal .btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.modal .btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+
+
+
 /* Responsive Design */
 @media (max-width: 991.98px) {
   .section-title {
@@ -468,7 +524,7 @@ body {
 
 @media (max-width: 767.98px) {
   #header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .genre-card {
