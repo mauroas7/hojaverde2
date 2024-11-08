@@ -6,10 +6,10 @@
     <title>La Hoja Verde - Biblioteca</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="py-4" id="header">
         <div class="container">
             <h1 class="text-center mb-4">La Hoja Verde</h1>
@@ -31,27 +31,25 @@
     </header>
 
     <main>
-        <!-- About Us Section -->
         <section class="about-section py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="https://th.bing.com/th/id/OIG1.ncb_yzgx2Y0PETAqVxsH?pid=ImgGn" alt="Sobre nosotros" class="about-image">
+                        <img src="https://th.bing.com/th/id/OIG1.ncb_yzgx2Y0PETAqVxsH?pid=ImgGn" alt="Sobre nosotros" class="about-image img-fluid">
                     </div>
                     <div class="col-lg-6">
                         <div class="about-content">
                             <h2 class="section-title">¿Quiénes somos?</h2>
-                            <p>La hoja verde es una biblioteca innovadora que busca ser el epicentro del conocimiento y la cultura. Nos dedicamos a servir tanto a estudiantes e investigadores como a lectores casuales, ofreciendo un espacio moderno y acogedor para el aprendizaje y el descubrimiento.</p>
+                            <p class="lead">La hoja verde es una biblioteca innovadora que busca ser el epicentro del conocimiento y la cultura. Nos dedicamos a servir tanto a estudiantes e investigadores como a lectores casuales, ofreciendo un espacio moderno y acogedor para el aprendizaje y el descubrimiento.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Genres Section -->
         <section class="genres-section">
-            <h2 class="section-title text-center py-4">Géneros Literarios</h2>
             <div class="container">
+                <h2 class="section-title text-center py-4">Géneros Literarios</h2>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="genre-card">
@@ -78,16 +76,15 @@
             </div>
         </section>
 
-        <!-- Membership Section -->
         <section class="membership-section py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-4">
                         <div class="membership-intro">
-                            <img src="https://th.bing.com/th/id/OIG2.IGCzGPu1eMJHYcKVLIIM?pid=ImgGn" alt="Membresía" class="membership-image">
+                            <img src="https://th.bing.com/th/id/OIG2.IGCzGPu1eMJHYcKVLIIM?pid=ImgGn" alt="Membresía" class="membership-image img-fluid">
                             <h2 class="section-title">Planes de membresía</h2>
-                            <p>Descubre los beneficios exclusivos de ser miembro de La Hoja Verde. Accede a préstamos extendidos, salas de estudio y eventos especiales.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#membershipModal">Obtener membresía</button>
+                            <p class="lead">Descubre los beneficios exclusivos de ser miembro de La Hoja Verde. Accede a préstamos extendidos, salas de estudio y eventos especiales.</p>
+                            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#membershipModal">Obtener membresía</button>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -95,22 +92,20 @@
                             <div class="col-md-6 mb-4">
                                 <div class="plan-card">
                                     <h3>Plan Básico</h3>
-                                    <ul>
-                                        <li>✓ Préstamo de 2 libros</li>
-                                        <li>✓ 10 horas mensuales en sala de estudio</li>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill"></i> Préstamo de 2 libros</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> 10 horas mensuales en sala de estudio</li>
                                     </ul>
-                                    <div class="price">$1500/mes</div>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="plan-card premium">
                                     <h3>Plan Premium</h3>
-                                    <ul>
-                                        <li>✓ Préstamo de 5 libros</li>
-                                        <li>✓ Horas ilimitadas en sala de estudio</li>
-                                        <li>✓ 50% descuento en eventos</li>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill"></i> Préstamo de 5 libros</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> Horas ilimitadas en sala de estudio</li>
+                                        <li><i class="bi bi-check-circle-fill"></i> 50% descuento en eventos</li>
                                     </ul>
-                                    <div class="price">$2500/mes</div>
                                 </div>
                             </div>
                         </div>
@@ -119,10 +114,9 @@
             </div>
         </section>
 
-        <!-- Payment Methods Section -->
         <section class="payment-section py-5">
-            <h2 class="section-title text-center mb-4">Métodos de Pago Aceptados</h2>
             <div class="container">
+                <h2 class="section-title text-center mb-4">Métodos de Pago Aceptados</h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="payment-card">
@@ -149,7 +143,6 @@
             </div>
         </section>
 
-        <!-- Location Section -->
         <section class="location-section py-5">
             <div class="container">
                 <div class="row">
@@ -161,13 +154,13 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="location-info">
-                            <img src="https://th.bing.com/th/id/OIG1.gqOdJ2xNdnhAD35jxBl8?pid=ImgGn" alt="Nuestra sede" class="location-image">
+                            <img src="https://th.bing.com/th/id/OIG1.gqOdJ2xNdnhAD35jxBl8?pid=ImgGn" alt="Nuestra sede" class="location-image img-fluid">
                             <h2 class="section-title">Encontranos acá</h2>
                             <div class="contact-details">
                                 <h4>Centro Histórico</h4>
-                                <p>📍 Calle Gral. Espejo 656</p>
-                                <p>📞 261-4369323</p>
-                                <p>🕒 Lun a Vie: 8:00 - 20:00</p>
+                                <p><i class="bi bi-geo-alt-fill"></i> Calle Gral. Espejo 656</p>
+                                <p><i class="bi bi-telephone-fill"></i> 261-4369323</p>
+                                <p><i class="bi bi-clock-fill"></i> Lun a Vie: 8:00 - 20:00</p>
                             </div>
                         </div>
                     </div>
@@ -176,7 +169,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer py-4">
         <div class="container">
             <div class="row align-items-center">
@@ -194,7 +186,6 @@
         </div>
     </footer>
 
-    <!-- Order Modal -->
     <div class="modal fade" id="orderModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -227,7 +218,6 @@
         </div>
     </div>
 
-    <!-- Membership Modal -->
     <div class="modal fade" id="membershipModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -253,8 +243,8 @@
                             <label for="planType" class="form-label">Plan</label>
                             <select class="form-select" id="planType" required>
                                 <option value="">Seleccionar plan...</option>
-                                <option value="basic">Plan Básico - $1500/mes</option>
-                                <option value="premium">Plan Premium - $2500/mes</option>
+                                <option value="basic">Plan Básico</option>
+                                <option value="premium">Plan Premium</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Solicitar Membresía</button>
