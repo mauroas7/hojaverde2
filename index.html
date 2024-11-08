@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Hoja Verde - Biblioteca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-4" id="header">
+        <div class="container">
+            <h1 class="text-center mb-4">La Hoja Verde</h1>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" class="nav-link nav-button">Inicio</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link nav-button" data-bs-toggle="modal" data-bs-target="#orderModal">Encargos</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link nav-button">Catálogo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Us Section -->
+        <section class="about-section py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="https://th.bing.com/th/id/OIG1.ncb_yzgx2Y0PETAqVxsH?pid=ImgGn" alt="Sobre nosotros" class="about-image">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <h2 class="section-title">¿Quiénes somos?</h2>
+                            <p>La hoja verde es una biblioteca innovadora que busca ser el epicentro del conocimiento y la cultura. Nos dedicamos a servir tanto a estudiantes e investigadores como a lectores casuales, ofreciendo un espacio moderno y acogedor para el aprendizaje y el descubrimiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Genres Section -->
+        <section class="genres-section">
+            <h2 class="section-title text-center py-4">Géneros Literarios</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="genre-card">
+                            <div class="genre-icon"><i class="bi bi-book"></i></div>
+                            <h3>Ficción</h3>
+                            <p>Novelas, cuentos y narrativa contemporánea</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="genre-card">
+                            <div class="genre-icon"><i class="bi bi-lightning"></i></div>
+                            <h3>Ciencia Ficción</h3>
+                            <p>Aventuras futuristas y mundos alternativos</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="genre-card">
+                            <div class="genre-icon"><i class="bi bi-journal-text"></i></div>
+                            <h3>No Ficción</h3>
+                            <p>Historia, ciencia y biografías</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section class="membership-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="membership-intro">
+                            <img src="https://th.bing.com/th/id/OIG2.IGCzGPu1eMJHYcKVLIIM?pid=ImgGn" alt="Membresía" class="membership-image">
+                            <h2 class="section-title">Planes de membresía</h2>
+                            <p>Descubre los beneficios exclusivos de ser miembro de La Hoja Verde. Accede a préstamos extendidos, salas de estudio y eventos especiales.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#membershipModal">Obtener membresía</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="plan-card">
+                                    <h3>Plan Básico</h3>
+                                    <ul>
+                                        <li>✓ Préstamo de 2 libros</li>
+                                        <li>✓ 10 horas mensuales en sala de estudio</li>
+                                    </ul>
+                                    <div class="price">$1500/mes</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="plan-card premium">
+                                    <h3>Plan Premium</h3>
+                                    <ul>
+                                        <li>✓ Préstamo de 5 libros</li>
+                                        <li>✓ Horas ilimitadas en sala de estudio</li>
+                                        <li>✓ 50% descuento en eventos</li>
+                                    </ul>
+                                    <div class="price">$2500/mes</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Methods Section -->
+        <section class="payment-section py-5">
+            <h2 class="section-title text-center mb-4">Métodos de Pago Aceptados</h2>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="payment-card">
+                            <img src="https://th.bing.com/th/id/OIG2.KVa4ARUi2nLF8wpbWCw6?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Tarjetas" class="payment-icon">
+                            <h3>Tarjetas</h3>
+                            <p>Débito, crédito y prepagas</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="payment-card">
+                            <img src="https://th.bing.com/th/id/OIG1.IhkHZPUslUZMDzh9.Bmy?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Efectivo" class="payment-icon">
+                            <h3>Efectivo</h3>
+                            <p>En nuestra sucursal</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="payment-card">
+                            <img src="https://th.bing.com/th/id/OIG1.9kHRixHgnwX1v3iO0EPL?pid=ImgGn" alt="Billeteras" class="payment-icon">
+                            <h3>Billeteras Digitales</h3>
+                            <p>MercadoPago y Ualá</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="location-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.4482572927728!2d-68.8375878235339!3d-32.89057197432991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091ed2dd83f7%3A0xf41c7726d8beb561!2sGral.%20Espejo%20656%2C%20M5500%20Mendoza!5e0!3m2!1ses!2sar!4v1695667153371!5m2!1ses!2sar" 
+                                class="location-map" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="location-info">
+                            <img src="https://th.bing.com/th/id/OIG1.gqOdJ2xNdnhAD35jxBl8?pid=ImgGn" alt="Nuestra sede" class="location-image">
+                            <h2 class="section-title">Encontranos acá</h2>
+                            <div class="contact-details">
+                                <h4>Centro Histórico</h4>
+                                <p>📍 Calle Gral. Espejo 656</p>
+                                <p>📞 261-4369323</p>
+                                <p>🕒 Lun a Vie: 8:00 - 20:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <span>&copy; 2024 La Hoja Verde, Inc</span>
+                </div>
+                <div class="col-md-6">
+                    <ul class="social-links">
+                        <li><a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Realizar un Encargo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="bookTitle" class="form-label">Título del Libro</label>
+                            <input type="text" class="form-control" id="bookTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="author" class="form-label">Autor</label>
+                            <input type="text" class="form-control" id="author" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comments" class="form-label">Comentarios Adicionales</label>
+                            <textarea class="form-control" id="comments" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Encargo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Membership Modal -->
+    <div class="modal fade" id="membershipModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Solicitar Membresía</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="memberName" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="memberName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="memberEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="memberEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="memberPhone" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="memberPhone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="planType" class="form-label">Plan</label>
+                            <select class="form-select" id="planType" required>
+                                <option value="">Seleccionar plan...</option>
+                                <option value="basic">Plan Básico - $1500/mes</option>
+                                <option value="premium">Plan Premium - $2500/mes</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Solicitar Membresía</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
