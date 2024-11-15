@@ -504,6 +504,93 @@ body {
     border-color: var(--accent-color);
 }
 
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.theme-toggle:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  --primary-color: #4A7856;
+  --secondary-color: #2C5530;
+  --accent-color: #D2691E;
+  --text-light: #F5F5F5;
+  --text-dark: #E0E0E0;
+  --background-light: #1E1E1E;
+  --background-dark: #121212;
+  --shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+body.dark-mode #header {
+  background-color: var(--background-dark);
+}
+
+body.dark-mode .about-section,
+body.dark-mode .payment-section {
+  background-color: var(--background-light);
+}
+
+body.dark-mode .genres-section,
+body.dark-mode .location-section {
+  background-color: var(--background-dark);
+}
+
+body.dark-mode .about-content,
+body.dark-mode .payment-card {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+body.dark-mode .genre-card,
+body.dark-mode .plan-card {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+body.dark-mode .footer {
+  background-color: var(--background-dark);
+}
+
+body.dark-mode .section-title,
+body.dark-mode .plan-card h3,
+body.dark-mode .payment-card h3 {
+  color: var(--text-light);
+}
+
+body.dark-mode .scroll-to-top {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+body.dark-mode .scroll-to-top:hover {
+  background-color: var(--secondary-color);
+}
 
 
 
