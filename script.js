@@ -1,16 +1,53 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const obtenerMembresiaBtn = document.getElementById('obtenerMembresia');
+    const confirmarMembresiaBtn = document.getElementById('confirmarMembresia');
+
+    obtenerMembresiaBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita la acción predeterminada del botón
+    });
+
+    confirmarMembresiaBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Previene cualquier comportamiento predeterminado
+
+        // Información de WhatsApp
+        const phone = "542617208667"; // Número sin el "+"
+        const message = "¡Hola! Estoy interesado en obtener una membresía."; // Mensaje precargado
+        const url = 'https://web.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}';
+
+        // Detectar si es móvil o escritorio
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            // Redirige a WhatsApp móvil
+            window.location.href = 'https://wa.me/${phone}?text=${encodeURIComponent(message)}';
+        } else {
+            // Redirige a WhatsApp Web
+            window.location.href = url;
+        }
+
+        // Cierra el modal (si aplica)
+        const membershipModal = bootstrap.Modal.getInstance(document.getElementById('membershipModal'));
+        if (membershipModal) {
+            membershipModal.hide();
+        }
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     const icon = themeToggle.querySelector('i');
 
-    // Check for saved theme preference or default to light mode
+    // Chequeo de configuracion del tema oscuro 
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
         body.classList.add(currentTheme);
         updateIcon(currentTheme === 'dark-mode');
     }
 
-    // Theme toggle event listener
+
+
+    // Event listener para tema oscuro
     themeToggle.addEventListener('click', function() {
         if (body.classList.contains('dark-mode')) {
             body.classList.remove('dark-mode');
@@ -33,13 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ... (rest of your existing JavaScript code)
+
 });document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopButton = document.getElementById("scrollToTop");
     const obtenerMembresiaBtn = document.getElementById('obtenerMembresia');
     const membershipModal = new bootstrap.Modal(document.getElementById('membershipModal'));
 
-    // Scroll to top functionality
+    // Ir hasta arriba de la pagina
     window.addEventListener('scroll', function() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             scrollToTopButton.style.display = "block";
