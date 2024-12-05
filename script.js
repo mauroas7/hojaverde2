@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault(); // Previene cualquier comportamiento predeterminado
 
         // Información de WhatsApp
-        const phone = "542617208667"; // Número sin el "+"
+        const phone = "5492617208667"; // Número sin el "+"
         const message = "¡Hola! Estoy interesado en obtener una membresía."; // Mensaje precargado
-        const url = 'https://web.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}';
+        const url = `https://web.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
 
         // Detectar si es móvil o escritorio
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             // Redirige a WhatsApp móvil
-            window.location.href = 'https://wa.me/${phone}?text=${encodeURIComponent(message)}';
+            window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         } else {
             // Redirige a WhatsApp Web
             window.location.href = url;
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
 
 
